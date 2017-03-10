@@ -22,7 +22,7 @@ namespace AccountingBook.Controllers
             {
                 new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,01),money = 300 },
                 new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,02),money = 1600 },
-                new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,03),money = 8 }
+                new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,03),money = 800 }
             };
 
             return View(dataList);
