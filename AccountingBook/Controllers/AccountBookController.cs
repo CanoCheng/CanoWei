@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AccountingBook.Models;
+using AccountingBook.Service;
 
 namespace AccountingBook.Controllers
 {
@@ -18,12 +19,8 @@ namespace AccountingBook.Controllers
         [HttpGet]
         public ActionResult DataInputForm()
         {
-            List<AccountingBookDataListModels> dataList = new List<AccountingBookDataListModels>()
-            {
-                new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,01),money = 300 },
-                new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,02),money = 1600 },
-                new AccountingBookDataListModels() { type = "支出",Date = new DateTime(2016,01,03),money = 800 }
-            };
+            AccountBookService accountbookservice = new AccountBookService();
+            List<AccountingBookDataListModels> dataList = accountbookservice.GetAll().ToList();
 
             return View(dataList);
         }

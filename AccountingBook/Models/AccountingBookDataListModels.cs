@@ -12,5 +12,7 @@ namespace AccountingBook.Models
         public DateTime Date { get; set; }
 
         public int money { get; set; }
+
+        public string Remark { get; set; }
     }
 }
