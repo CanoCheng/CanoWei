@@ -11,7 +11,7 @@
 
 ---
 
-## Version 2 (done)
+## Version 2 
 
 #### 請將記帳本呈現資料的部分改為真DB (done)
 
@@ -19,16 +19,16 @@
 * 範例資料庫請使用HomeWorkDB 內的資料
 * 不可改變第一天設計的ViewModel
 
-#### 建議練習 (done)
+#### 建議練習 
 
 * 實做Service 層
 
-####  額外挑戰 (done)
+####  額外挑戰 
 
 * UnitOfWork
 * Repository
 
-#### 個人挑戰 (done)
+#### 個人挑戰 
 
 * IOC & DI ( 使用 Unity容器 )
 * Unit of Work 生命週期調整
