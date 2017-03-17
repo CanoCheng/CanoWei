@@ -45,7 +45,7 @@ namespace AccountingBook.Controllers
             ////return PartialView("ChildAction",dataList);->如果partialViewName不是跟Action同名的話，就要加上ViewName在Model前面
             ////return View(dataList);
 
-            return PartialView(_accountBookSvc.GetAll());
+            return PartialView(_accountBookSvc.GetAll().ToList());
         }
 
         //Ajax帳本輸入
@@ -63,7 +63,7 @@ namespace AccountingBook.Controllers
         public ActionResult AccountBookForAjax()
         {
             //List<AccountingBookDataListModels> dataList = accountbookservice.GetAll().ToList();
-            var dataList = _accountBookSvc.GetAll();
+            var dataList = _accountBookSvc.GetAll().ToList();
 
             ViewData.Model = dataList;
 
