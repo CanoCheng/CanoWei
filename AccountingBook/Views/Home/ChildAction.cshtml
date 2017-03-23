@@ -1,4 +1,6 @@
-﻿@model List<AccountingBook.Models.AccountingBookDataListModels>
+﻿@using AccountingBook.Helper;
+
+@model List<AccountingBook.Models.AccountingBookDataListModels>
 
 @{ 
     Layout = null;
@@ -36,7 +38,7 @@
                 
                 <tr>
                     <td>@(++i)</td>
-                    <td nowrap="nowrap">@m.type</td>
+                    <td nowrap="nowrap">@Html.AccountingType(m.type)</td>
                     <td nowrap="nowrap">@m.Date.ToString("yyyy-MM-dd")</td>
                     <td>@m.money.ToString("#,###")</td>
                     <td nowrap="nowrap">@m.Remark</td>

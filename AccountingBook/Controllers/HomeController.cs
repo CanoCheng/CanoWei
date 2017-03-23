@@ -19,18 +19,76 @@ namespace AccountingBook.Controllers
             var unitOfWork = new EFUnitOfWork();
             _accountBookSvc = new AccountBookService(unitOfWork);
         }
+
         public ActionResult Index()
+        {            
+            var items = new List<SelectListItem>()
+            {
+                new SelectListItem() { Text="收入",Value="0",Selected = true},
+                new SelectListItem(){Text = "支出",Value="1"}
+            };
+
+            ViewData["dr1"] = items;
+            ViewData["partailView"] = _accountBookSvc.GetAll().ToList();
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(AccountingBookDataListModels request)
         {
-            
+            if (ModelState.IsValid)
+            {
+                _accountBookSvc.Add(request);
+                _accountBookSvc.Save();
+            }
             //List<AccountingBookDataListModels> dataList = accountbookservice.GetAll().ToList();
 
-            return View(_accountBookSvc.GetAll().ToList());
+            //return View(_accountBookSvc.GetAll().ToList());
+            var items = new List<SelectListItem>()
+            {
+                new SelectListItem() { Text="收入",Value="0",Selected = true},
+                new SelectListItem(){Text = "支出",Value="1"}
+            };
+
+            ViewData["dr1"] = items;
+            ViewData["partailView"] = _accountBookSvc.GetAll().ToList();
+            return View();
         }
+
+        
+
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description about page.";
+            var items = new List<SelectListItem>()
+            {
+                new SelectListItem() { Text="收入",Value="0",Selected = true},
+                new SelectListItem(){Text = "支出",Value="1"}
+            };
 
+            ViewData["dr1"] = items;
+
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult About(AccountingBookDataListModels request)
+        {
+            if (ModelState.IsValid)
+            {
+                _accountBookSvc.Add(request);
+                _accountBookSvc.Save();
+            }
+
+            var items = new List<SelectListItem>()
+            {
+                new SelectListItem() { Text="收入",Value="0",Selected = true},
+                new SelectListItem(){Text = "支出",Value="1"}
+            };
+
+            ViewData["dr1"] = items;
 
             return View();
         }

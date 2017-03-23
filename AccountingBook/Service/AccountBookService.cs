@@ -58,7 +58,7 @@ namespace AccountingBook.Service
                 Date = x.Dateee,
                 money = x.Amounttt,
                 Remark = x.Remarkkk
-            });
+            }).OrderByDescending(d=>d.Date);
 
             return accountList;
         }
@@ -98,6 +98,11 @@ namespace AccountingBook.Service
             };
 
             _accountBook.Create(accountbook);
+        }
+
+        public void Save()
+        {
+            _unitOfWork.Save();
         }
         #endregion
     }

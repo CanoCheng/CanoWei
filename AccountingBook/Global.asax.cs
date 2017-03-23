@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountingBook.Attribute;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace AccountingBook
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(DateValidAttribute), typeof(RequiredAttributeAdapter));
         }
     }
 }
