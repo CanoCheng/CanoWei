@@ -29,7 +29,7 @@ namespace AccountingBook.Controllers
             };
 
             ViewData["dr1"] = items;
-            ViewData["partailView"] = _accountBookSvc.GetAll().ToList();
+            ViewData["AccountingListpartailView"] = _accountBookSvc.GetAll().ToList();
 
             return View();
         }

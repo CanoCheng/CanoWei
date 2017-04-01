@@ -39,7 +39,7 @@ namespace AccountingBook.Attribute
             return true;
         }
 
-        //這段會在前端的tag 產生一個屬性:data-你給的VlidationTypeName，在前端去做驗證
+        //這段會在前端的tag 產生一個屬性:data-你給的ValidationTypeName，在前端去做驗證
         IEnumerable<ModelClientValidationRule> IClientValidatable.GetClientValidationRules(ModelMetadata metadata, ControllerContext context)
         {
             ModelClientValidationRule Rule = new ModelClientValidationRule
@@ -49,6 +49,7 @@ namespace AccountingBook.Attribute
                 ErrorMessage = FormatErrorMessage(metadata.GetDisplayName())
             };
 
+            Rule.ValidationParameters["input"] = Input;
             yield return Rule;
         }
     }

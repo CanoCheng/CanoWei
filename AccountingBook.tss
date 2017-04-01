@@ -62,7 +62,13 @@
       <string>d:\github\canowei\accountingbook\global.asax.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>D:\GitHub\CanoWei\AccountingBook\Helper\CategoryHelper.cs</string>
+      <string>d:\github\canowei\accountingbook\helper\categoryhelper.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>d:\github\canowei\accountingbook\content\site.css</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>d:\github\canowei\accountingbook\app_start\bundleconfig.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
