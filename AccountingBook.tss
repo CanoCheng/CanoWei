@@ -11,15 +11,6 @@
       <string>d:\github\canowei\accountingbook\controllers\homecontroller.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>d:\github\canowei\accountingbook\controllers\accountbookcontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>d:\github\canowei\accountingbook\views\accountbook\datainputform.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>d:\github\canowei\accountingbook\views\accountbook\_datatlistpratialview.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
       <string>D:\GitHub\CanoWei\AccountingBook\Views\Home\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
@@ -69,6 +60,9 @@
     </ArrayOfString>
     <ArrayOfString>
       <string>d:\github\canowei\accountingbook\app_start\bundleconfig.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>d:\github\canowei\accountingbook\views\shared\editortemplates\datetime.cshtml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

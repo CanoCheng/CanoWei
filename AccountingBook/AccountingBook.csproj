@@ -326,6 +326,8 @@
     <Content Include="Views\Home\_DatatListPratialView.cshtml" />
     <Content Include="Views\Home\ChildAction.cshtml" />
     <Content Include="Views\Home\AccountBookForAjax.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

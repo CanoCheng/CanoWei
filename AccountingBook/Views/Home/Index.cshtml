@@ -26,8 +26,8 @@
             </div>
             <div class="form-group">                
                 @Html.LabelFor(m => m.Date, new { @class = "col-md-2 control-label" })
-                <div class="col-sm-10">                    
-                    @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+                <div class="col-sm-10">                   
+                    @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form - control" } })
                     @Html.ValidationMessageFor(m => m.Date)
                 </div>
                
@@ -56,10 +56,19 @@
     //研究一下jqueryValidate.js怎麼做
     //<input class="form-control" data-val="true" data-val-date="欄位 日期 必須是日期。" data-val-daterange="輸入日期不可大於今天" data-val-required="日期 欄位是必要項。" id="Date" name="Date" type="text" value="">
 
+                          //檢核規則名稱        //value=欄位內容, elem為欄位元素, params為額外參數
     $.validator.addMethod("daterange", function (value, element) {
-        if (value == false) {
+        //console.log("value= " + value, "element= " + element);
+        if (value === false) {
             return true;
-        }       
+        }
+        var Nowdate = new Date();        
+        var inputdate = new Date(value);
+        debugger;
+        if (inputdate > Nowdate) {
+            return false;            
+        }
+        return true;      
     });
     $.validator.unobtrusive.adapters.addBool("daterange");
 </script>

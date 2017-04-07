@@ -49,7 +49,7 @@ namespace AccountingBook.Attribute
                 ErrorMessage = FormatErrorMessage(metadata.GetDisplayName())
             };
 
-            Rule.ValidationParameters["input"] = Input;
+            //Rule.ValidationParameters["input"] = Input;
             yield return Rule;
         }
     }
